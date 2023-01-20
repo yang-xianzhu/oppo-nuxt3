@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "serve": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "normalize.css": "^8.0.1",
+    "nuxt": "^3.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}

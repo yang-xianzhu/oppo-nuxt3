@@ -1,0 +1,52 @@
+// @use "./variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  color: #333;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-weight: normal;
+  text-decoration: none;
+  color: #000;
+}
+
+// 版心
+.w {
+  width: $contentWidth;
+  margin: 0 auto;
+}
+
+.border {
+  @include border();
+}
+
+.border-top {
+  @include borderTop();
+}
+
+.border-bottom {
+  @include borderTop();
+}
+
+.border-left {
+  @include borderTop();
+}
+
+.border-right {
+  @include borderTop();
+}

@@ -1,0 +1,17 @@
+/* 默认dark主题 */
+
+/* 浅色模式 */
+@media (prefers-color-scheme: light) {
+  :root {
+    --app-header-background-color: #222;
+    --app-header-color: #fff;
+  }
+}
+
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-header-background-color: #222;
+    --app-header-color: #fff;
+  }
+}
