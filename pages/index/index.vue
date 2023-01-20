@@ -1,13 +1,16 @@
 <template>
-  <div class="w">NuxtWelcome</div>
+  <div style="background-color: #fafafa; padding-top: 36px">
+    <div class="w">
+      <!-- 轮播图部分 -->
+      <swiper :list="banners" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
-// interface IProps {
-//   title: string;
-// }
-
-// const props = withDefaults(defineProps<IProps>({}), {
-//   title:''
-// });
+import { useHomeStore } from "@/store";
+const banners = useHomeStore().homeInfo?.banners?.map((v) => ({
+  imgUrl: v.picStr,
+  href: v.link,
+}));
 </script>

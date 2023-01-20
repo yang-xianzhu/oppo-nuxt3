@@ -13,9 +13,6 @@ ul,
 li {
   padding: 0;
   margin: 0;
-}
-
-ul {
   list-style: none;
 }
 
@@ -29,6 +26,12 @@ a {
 .w {
   width: $contentWidth;
   margin: 0 auto;
+}
+
+.text-truncate {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 .border {

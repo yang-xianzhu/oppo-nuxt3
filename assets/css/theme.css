@@ -5,6 +5,8 @@
   :root {
     --app-header-background-color: #222;
     --app-header-color: #fff;
+    --app-navbar-background-color: #fff;
+    --app-navbar-color: #222;
   }
 }
 
@@ -13,5 +15,7 @@
   :root {
     --app-header-background-color: #222;
     --app-header-color: #fff;
+    --app-navbar-background-color: #333;
+    --app-navbar-color: #fff;
   }
 }

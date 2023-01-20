@@ -16,7 +16,7 @@
           <NuxtLink to="/register">注册</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/">购物车</NuxtLink>
+          <NuxtLink to="/">购物车(0)</NuxtLink>
         </li>
       </ul>
     </div>

@@ -8,6 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@pinia/nuxt": "^0.4.6",
     "normalize.css": "^8.0.1",
     "nuxt": "^3.0.0"
   },
