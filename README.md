@@ -22,7 +22,14 @@ pnpm install
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+# npm
+npm run serve
+
+# yarn
+yarn  serve
+
+# pnpm
+pnpm  serve
 ```
 
 ## Production

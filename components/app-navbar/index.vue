@@ -36,7 +36,7 @@ nav {
   line-height: 84px;
   background-color: var(--app-navbar-background-color);
   transition: background-color 0.4s ease;
-  @include borderBottom(#f0f0f0, 1px);
+  @include borderBottom(var(--app-navbar-border-color), 1px);
 }
 
 .w {

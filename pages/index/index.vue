@@ -1,5 +1,10 @@
 <template>
-  <div style="background-color: #fafafa; padding-top: 36px">
+  <div
+    style="
+      background-color: var(--app-page-background-color);
+      padding-top: 36px;
+    "
+  >
     <div class="w">
       <!-- 轮播图部分 -->
       <swiper :list="banners" />

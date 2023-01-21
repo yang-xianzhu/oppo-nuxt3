@@ -7,6 +7,8 @@
     --app-header-color: #fff;
     --app-navbar-background-color: #fff;
     --app-navbar-color: #222;
+    --app-navbar-border-color: #f0f0f0;
+    --app-page-background-color: #fafafa;
   }
 }
 
@@ -17,5 +19,7 @@
     --app-header-color: #fff;
     --app-navbar-background-color: #333;
     --app-navbar-color: #fff;
+    --app-navbar-border-color: #000;
+    --app-page-background-color: #333;
   }
 }
