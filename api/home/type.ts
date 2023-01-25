@@ -1,12 +1,12 @@
 export type THomeData = "oppo" | "onePlus" | "intelligent";
 
 export interface IData {
-  navbars: Navbar[];
+  navbars: INavbar[];
   banners: Banner[];
-  categorys: Category[];
+  categorys: ICategory[];
 }
 
-export interface Navbar {
+export interface INavbar {
   id: string;
   title: string;
   type: string;
@@ -33,7 +33,7 @@ export interface Banner {
   link: string;
 }
 
-export interface Category {
+export interface ICategory {
   id: number;
   picStr: string;
   title: string;

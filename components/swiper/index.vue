@@ -46,7 +46,7 @@ const {
 } = withDefaults(defineProps<IProps>(), {});
 
 // 无缝轮播展示list
-const computedList = computed(() => [...list, list[0]]);
+const computedList = computed(() => [list[list.length - 1], ...list, list[0]]);
 
 // 当前轮播的索引
 const currentIdx = ref<number>(0);
@@ -62,7 +62,7 @@ const isTrantion = ref<boolean>(true);
 const computedStyle = computed<CSSProperties>(() => ({
   ...imgStyle,
   transform: `translateX(-${currentIdx.value * 100}%)`,
-  transition: isTrantion.value ? "transform 0.8s ease" : "none",
+  transition: isTrantion.value ? "transform 0.5s ease" : "none",
 }));
 
 function changeSwiper(number: number) {
@@ -94,6 +94,7 @@ function changeSwiper(number: number) {
 
 // 切换小圆点
 function handleDot(idx: number) {
+  isTrantion.value = true;
   currentIdx.value = idx;
 }
 
