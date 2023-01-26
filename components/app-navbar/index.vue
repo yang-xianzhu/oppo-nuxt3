@@ -7,8 +7,14 @@
         </NuxtLink>
       </h1>
       <ul class="navbar">
-        <li v-for="item in navbars" :key="item.id">
-          <NuxtLink :to="item.link"> {{ item.title }} </NuxtLink>
+        <li
+          v-for="item in navbars"
+          :key="item.id"
+          @click="handlePage(item.type as THomeData)"
+        >
+          <NuxtLink :to="item.type === 'oppo' ? '/' : item.type">
+            {{ item.title }}</NuxtLink
+          >
         </li>
       </ul>
       <div class="nav-search">
@@ -27,7 +33,14 @@
 
 <script setup lang="ts">
 import { useHomeStore } from "@/store";
+import type { THomeData } from "@/api/home/type";
 const navbars = useHomeStore().homeInfo.navbars;
+// console.log(navbars);
+//切换路由
+const store = useHomeStore();
+function handlePage(type: THomeData) {
+  store.fetchHomeData(type);
+}
 </script>
 
 <style lang="scss" scoped>
@@ -64,16 +77,15 @@ nav {
   display: flex;
   margin-left: 60px;
   li {
-    &:nth-child(n + 2) {
-      margin-left: 60px;
-    }
-  }
-  a {
     color: var(--app-navbar-color);
     opacity: 0.55;
     transition: all 0.4s ease;
+    cursor: pointer;
     &:hover {
       opacity: 1;
+    }
+    &:nth-child(n + 2) {
+      margin-left: 60px;
     }
   }
 }
