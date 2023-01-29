@@ -11,6 +11,10 @@
           v-for="item in navbars"
           :key="item.id"
           @click="handlePage(item.type as THomeData)"
+          :class="{
+            active:
+              item.type === 'oppo' ? '/' : '/' + item.type === currentPath,
+          }"
         >
           <NuxtLink :to="item.type === 'oppo' ? '/' : item.type">
             {{ item.title }}</NuxtLink
@@ -35,7 +39,14 @@
 import { useHomeStore } from "@/store";
 import type { THomeData } from "@/api/home/type";
 const navbars = useHomeStore().homeInfo.navbars;
-// console.log(navbars);
+const route = useRoute();
+const currentPath = ref<THomeData>("/" as THomeData);
+watch(
+  () => route.fullPath,
+  (path) => {
+    currentPath.value = path as THomeData;
+  }
+);
 //切换路由
 const store = useHomeStore();
 function handlePage(type: THomeData) {
@@ -81,6 +92,9 @@ nav {
     opacity: 0.55;
     transition: all 0.4s ease;
     cursor: pointer;
+    &.active {
+      opacity: 0.88;
+    }
     &:hover {
       opacity: 1;
     }
