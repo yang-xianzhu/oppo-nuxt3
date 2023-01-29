@@ -1,8 +1,7 @@
 import { defineStore } from "pinia";
 import { getHomeData } from "@/api/home";
-import { getDetailData } from "@/api/detail";
 import type { THomeData, IData } from "@/api/home/type";
-import type { TDetail, IDetailData } from "@/api/detail/type";
+import type { IDetailData } from "@/api/detail/type";
 
 export const useHomeStore = defineStore("home", {
   state() {

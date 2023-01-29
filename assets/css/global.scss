@@ -63,14 +63,24 @@ em {
   transition: all 0.4s ease;
 }
 
+// 卡片hover效果
 .app-card-hover:hover {
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
   transform: translateY(-2px);
 }
 
+// 文本溢出隐藏
 .text-overflow-hide {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+// 禁止选中
+.no-select {
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }

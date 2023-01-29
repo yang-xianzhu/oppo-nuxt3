@@ -9,6 +9,9 @@
     --app-navbar-color: #222;
     --app-navbar-border-color: #f0f0f0;
     --app-page-background-color: #fafafa;
+    /* 选项卡波浪色 */
+    --app-tabs-ware-depp-color: #f34141;
+    --app-tabs-ware-color: #fbe7e6;
   }
 }
 

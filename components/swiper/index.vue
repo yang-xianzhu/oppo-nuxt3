@@ -62,7 +62,7 @@ const isTrantion = ref<boolean>(true);
 const computedStyle = computed<CSSProperties>(() => ({
   ...imgStyle,
   transform: `translateX(-${currentIdx.value * 100}%)`,
-  transition: isTrantion.value ? "transform 0.5s ease" : "none",
+  transition: isTrantion.value ? "transform 0.5s ease-in-out" : "none",
 }));
 
 function changeSwiper(number: number) {
